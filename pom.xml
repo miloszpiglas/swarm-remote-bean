@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright 2015 Red Hat, Inc. and/or its affiliates.
+  ~
+  ~ Licensed under the Apache License version 2.0, available at http://www.apache.org/licenses/LICENSE-2.0
+  -->
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+<groupId>pl.milosz</groupId>
+  <artifactId>swarm-remote-bean</artifactId>
+<version>0.0.1-SNAPSHOT</version>
+
+  <packaging>war</packaging>
+
+  <properties>
+		<wildfly.version>1.0.0.Alpha4-SNAPSHOT</wildfly.version>
+	</properties>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>2.6</version>
+        <configuration>
+          <failOnMissingWebXml>false</failOnMissingWebXml>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.wildfly.swarm</groupId>
+        <artifactId>wildfly-swarm-plugin</artifactId>
+		<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>package</goal>
+						</goals>
+					</execution>
+				</executions>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+	<dependency>
+		<groupId>org.wildfly.swarm</groupId>
+		<artifactId>wildfly-swarm-bootstrap</artifactId>
+		<version>${wildfly.version}</version>
+		<!-- <scope>provided</scope> -->
+	</dependency>
+	<dependency>
+		<groupId>org.wildfly.swarm</groupId>
+		<artifactId>wildfly-swarm-weld-jaxrs</artifactId>
+		<version>${wildfly.version}</version>
+		<!-- <scope>provided</scope> -->
+	</dependency>
+	<dependency>
+		<groupId>org.wildfly.swarm</groupId>
+		<artifactId>wildfly-swarm-container</artifactId>
+		<version>${wildfly.version}</version>
+		<!-- <scope>provided</scope> -->
+	</dependency>
+	<dependency>
+		<groupId>org.jboss.shrinkwrap</groupId>
+		<artifactId>shrinkwrap-api</artifactId>
+		<version>1.1.2</version>
+		<scope>provided</scope>
+	</dependency>
+	<dependency>
+		<groupId>org.wildfly.swarm</groupId>
+		<artifactId>wildfly-swarm-io</artifactId>
+		<version>${wildfly.version}</version>
+		<!-- <scope>provided</scope> -->
+	</dependency>
+	<dependency>
+		<groupId>org.wildfly.swarm</groupId>
+		<artifactId>wildfly-swarm-ee</artifactId>
+		<version>${wildfly.version}</version>
+		<!-- <scope>provided</scope> -->
+	</dependency>
+	<dependency>
+		<groupId>org.wildfly.swarm</groupId>
+		<artifactId>wildfly-swarm-undertow</artifactId>
+		<version>${wildfly.version}</version>
+		<!-- <scope>provided</scope> -->
+	</dependency>
+	<dependency>
+		<groupId>org.wildfly.swarm</groupId>
+		<artifactId>wildfly-swarm-naming</artifactId>
+		<version>${wildfly.version}</version>
+		<!-- <scope>provided</scope> -->
+	</dependency>
+	<dependency>
+		<groupId>org.wildfly.swarm</groupId>
+		<artifactId>wildfly-swarm-ejb</artifactId>
+		<version>${wildfly.version}</version>
+		<!-- <scope>provided</scope> -->
+	</dependency>
+	<dependency>
+		<groupId>org.wildfly.swarm</groupId>
+		<artifactId>wildfly-swarm-security</artifactId>
+		<version>${wildfly.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.wildfly.swarm</groupId>
+		<artifactId>wildfly-swarm-transactions</artifactId>
+		<version>${wildfly.version}</version>
+	</dependency>
+			<dependency>
+		<groupId>org.wildfly.swarm</groupId>
+		<artifactId>wildfly-swarm-connector</artifactId>
+		<version>${wildfly.version}</version>
+	</dependency>
+	<dependency>
+	  <groupId>org.wildfly.swarm</groupId>
+	  <artifactId>wildfly-swarm-weld</artifactId>
+	  <version>${wildfly.version}</version>
+	</dependency>
+	<dependency>
+	  <groupId>org.wildfly.swarm</groupId>
+	  <artifactId>wildfly-swarm-undertow</artifactId>
+	  <version>${wildfly.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.wildfly</groupId>
+		<artifactId>wildfly-spec-api</artifactId>
+		<version>10.0.0.Alpha6</version>
+		<type>pom</type>
+		<scope>provided</scope>
+	</dependency>
+  </dependencies>
+
+</project>
