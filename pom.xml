@@ -15,7 +15,7 @@
   <packaging>war</packaging>
 
   <properties>
-		<wildfly.version>1.0.0.Alpha4-SNAPSHOT</wildfly.version>
+		<wildfly.version>1.0.0.Alpha5-SNAPSHOT</wildfly.version>
 	</properties>
   <build>
     <plugins>
@@ -29,6 +29,7 @@
       <plugin>
         <groupId>org.wildfly.swarm</groupId>
         <artifactId>wildfly-swarm-plugin</artifactId>
+        <version>${wildfly.version}</version>
 		<executions>
 					<execution>
 						<phase>package</phase>
@@ -44,89 +45,15 @@
   <dependencies>
 	<dependency>
 		<groupId>org.wildfly.swarm</groupId>
-		<artifactId>wildfly-swarm-bootstrap</artifactId>
+		<artifactId>wildfly-swarm-jaxrs-weld</artifactId>
 		<version>${wildfly.version}</version>
 		<!-- <scope>provided</scope> -->
 	</dependency>
 	<dependency>
 		<groupId>org.wildfly.swarm</groupId>
-		<artifactId>wildfly-swarm-weld-jaxrs</artifactId>
+		<artifactId>wildfly-swarm-ejb-remote</artifactId>
 		<version>${wildfly.version}</version>
 		<!-- <scope>provided</scope> -->
-	</dependency>
-	<dependency>
-		<groupId>org.wildfly.swarm</groupId>
-		<artifactId>wildfly-swarm-container</artifactId>
-		<version>${wildfly.version}</version>
-		<!-- <scope>provided</scope> -->
-	</dependency>
-	<dependency>
-		<groupId>org.jboss.shrinkwrap</groupId>
-		<artifactId>shrinkwrap-api</artifactId>
-		<version>1.1.2</version>
-		<scope>provided</scope>
-	</dependency>
-	<dependency>
-		<groupId>org.wildfly.swarm</groupId>
-		<artifactId>wildfly-swarm-io</artifactId>
-		<version>${wildfly.version}</version>
-		<!-- <scope>provided</scope> -->
-	</dependency>
-	<dependency>
-		<groupId>org.wildfly.swarm</groupId>
-		<artifactId>wildfly-swarm-ee</artifactId>
-		<version>${wildfly.version}</version>
-		<!-- <scope>provided</scope> -->
-	</dependency>
-	<dependency>
-		<groupId>org.wildfly.swarm</groupId>
-		<artifactId>wildfly-swarm-undertow</artifactId>
-		<version>${wildfly.version}</version>
-		<!-- <scope>provided</scope> -->
-	</dependency>
-	<dependency>
-		<groupId>org.wildfly.swarm</groupId>
-		<artifactId>wildfly-swarm-naming</artifactId>
-		<version>${wildfly.version}</version>
-		<!-- <scope>provided</scope> -->
-	</dependency>
-	<dependency>
-		<groupId>org.wildfly.swarm</groupId>
-		<artifactId>wildfly-swarm-ejb</artifactId>
-		<version>${wildfly.version}</version>
-		<!-- <scope>provided</scope> -->
-	</dependency>
-	<dependency>
-		<groupId>org.wildfly.swarm</groupId>
-		<artifactId>wildfly-swarm-security</artifactId>
-		<version>${wildfly.version}</version>
-	</dependency>
-	<dependency>
-		<groupId>org.wildfly.swarm</groupId>
-		<artifactId>wildfly-swarm-transactions</artifactId>
-		<version>${wildfly.version}</version>
-	</dependency>
-			<dependency>
-		<groupId>org.wildfly.swarm</groupId>
-		<artifactId>wildfly-swarm-connector</artifactId>
-		<version>${wildfly.version}</version>
-	</dependency>
-	<dependency>
-	  <groupId>org.wildfly.swarm</groupId>
-	  <artifactId>wildfly-swarm-weld</artifactId>
-	  <version>${wildfly.version}</version>
-	</dependency>
-	<dependency>
-	  <groupId>org.wildfly.swarm</groupId>
-	  <artifactId>wildfly-swarm-undertow</artifactId>
-	  <version>${wildfly.version}</version>
-	</dependency>
-	<dependency>
-		<groupId>org.wildfly</groupId>
-		<artifactId>wildfly-spec-api</artifactId>
-		<version>10.0.0.Alpha6</version>
-		<type>pom</type>
-		<scope>provided</scope>
 	</dependency>
   </dependencies>
 
