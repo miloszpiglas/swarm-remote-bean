@@ -1,7 +1,9 @@
 package pl.milosz.bean;
 
+import java.io.Serializable;
 
-public interface GreeterIf {
+
+public interface IGreeter extends Serializable {
     public String greet();
-	
+	public String change();
 }

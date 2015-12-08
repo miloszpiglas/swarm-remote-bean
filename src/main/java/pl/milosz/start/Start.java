@@ -1,12 +1,9 @@
 package pl.milosz.start;
 
 import org.jboss.shrinkwrap.api.ShrinkWrap;
-import org.wildfly.swarm.config.infinispan.CacheContainer;
-import org.wildfly.swarm.config.infinispan.cache_container.*;
 import org.wildfly.swarm.container.Container;
 import org.wildfly.swarm.container.JARArchive;
 import org.wildfly.swarm.infinispan.InfinispanFraction;
-//import org.wildfly.swarm.jgroups.JGroupsFraction;
 
 import pl.milosz.bean.Greeter;
 import pl.milosz.bean.IGreeter;
