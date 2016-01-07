@@ -18,15 +18,16 @@ public class Greeter implements IGreeter {
 	private CacheContainer container;
 
 	public String greet() {
-		Object hw = container.getCache().get("hello_world");
+		/*Object hw = container.getCache().get("hello_world");
 		if (hw != null) {
 			return "GET: "+hw.toString();
-		}
+		}*/
 		return "GET: Default Greetings";
 	}
 
 	public String change() {
-		Object original = container.getCache().get("hello_world");
+		return null;
+		/*Object original = container.getCache().get("hello_world");
 		if (original != null)
 		{
 			original = original.toString() + "1";
@@ -36,6 +37,6 @@ public class Greeter implements IGreeter {
 			original = "Default greetings";
 		}
 		container.getCache().put("hello_world", original);
-		return original.toString();
+		return original.toString();*/
 	}
 }

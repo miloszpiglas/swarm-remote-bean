@@ -1,4 +1,4 @@
 Manifest-Version: 1.0
 Archiver-Version: Plexus Archiver
 Created-By: Apache Maven
-Dependencies: org.infinispan
+Dependencies: org.wilfly.swarm.infinispan
